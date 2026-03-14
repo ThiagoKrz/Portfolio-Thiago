@@ -78,30 +78,151 @@ const content = {
     },
     projects: {
       title: 'Projetos',
-      subtitle: 'Projetos agrupados por area para facilitar a navegacao.',
       sections: [
         {
           title: 'Desenvolvimento',
-          items: [
-            'Landing page responsiva para negocio local',
-            'Dashboard simples para acompanhamento de metas',
-            'Aplicacao de tarefas com persistencia local',
+          projects: [
+            {
+              title: 'Fate Café React',
+              description: 'Hub de Dados, Traduções, Guias, e Informações da desenvolvedora Type-Moon em Português.',
+              longDescription:
+                'Fate Café React é um hub criado para concentrar dados, traduções, guias e informações relacionadas ao universo Type-Moon em português. O projeto foi pensado para entregar navegação clara, leitura confortável e uma base sólida para expansão contínua de conteúdo.',
+              tech: ['React', 'Vite', 'CSS3', 'Vercel'],
+              image: 'proj1',
+              primaryAction: {
+                type: 'github',
+                label: 'GitHub',
+                href: 'https://github.com/ThiagoKrz/fate-cafe-react',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://fatecafe.vercel.app/',
+              },
+            },
+            {
+              title: 'KrEventos',
+              description: 'Sistema responsivo para cadastro de eventos, e estruturação de conteúdo.',
+              longDescription:
+                'KrEventos é um sistema web voltado para cadastro, organização e apresentação de eventos em uma interface responsiva. O foco do projeto está em estruturar bem as informações, facilitar a leitura dos dados e manter uma experiência visual objetiva e funcional.',
+              tech: ['C#', '.NET', 'Angular'],
+              image: 'proj2',
+              primaryAction: {
+                type: 'github',
+                label: 'GitHub',
+                href: 'https://github.com/ThiagoKrz/KrEventos',
+              },
+            },
+            {
+              title: 'Agenda Policlínica',
+              description: 'Back-end para gerenciamento clínico com foco em rotas, estrutura de serviços e organização da aplicação.',
+              longDescription:
+                'Agenda Policlínica é um back-end desenvolvido para atender fluxos de gerenciamento clínico, com atenção à organização de rotas, serviços e estrutura interna da aplicação. O projeto prioriza clareza arquitetural, manutenção futura e base sólida para integração com front-end.',
+              tech: ['Node.js', 'Angular', 'API REST'],
+              image: 'proj3',
+              primaryAction: {
+                type: 'github',
+                label: 'GitHub',
+                href: 'https://github.com/ThiagoKrz/agendaclinicaser-server',
+              },
+            },
           ],
         },
         {
-          title: 'Traducao',
-          items: [
-            'Localizacao de guia de produto digital',
-            'Adaptacao de documentacao tecnica',
-            'Revisao de textos institucionais EN/PT-BR',
+          title: 'Tradução',
+          projects: [
+            {
+              title: 'Fate/GO',
+              description: 'Projeto de tradução com foco em adaptação de texto, contexto narrativo e consistência terminológica.',
+              longDescription:
+                'O projeto de Fate/GO envolve tradução e adaptação de conteúdo com atenção especial ao contexto narrativo, consistência terminológica e qualidade final do texto em português. O trabalho inclui coordenação, revisão e decisões de localização pensadas para preservar identidade e fluidez.',
+              tech: ["Liderança de equipe", 'Localização', 'Revisão', 'Terminologia'],
+              image: 'game1',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=tJPDcEIBF_4',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://chaldea-br.vercel.app/',
+              },
+            },
+            {
+              title: 'Tsukihime Remake',
+              description: 'Trabalho de tradução e adaptação textual com cuidado especial em fluidez, tom e fidelidade de conteúdo.',
+              longDescription:
+                'Tsukihime Remake reúne tradução, adaptação textual e cuidado editorial para manter tom, fluidez e fidelidade ao material original. O foco do projeto é entregar uma leitura natural em português sem perder nuances narrativas, estilo e intenção de cena.',
+              tech: ["Liderança de equipe", 'Localização', 'Revisão', 'Terminologia'],
+              image: 'game2',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=nopL0xeA4DM',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://fatecafe.vercel.app/#/traducoes/tsukihime-remake',
+              },
+            },
+            {
+              title: 'Witch on the Holy Night',
+              description: 'Projeto de localização com foco em experiência do jogador, clareza de leitura e contexto narrativo.',
+              longDescription:
+                'Witch on the Holy Night é um projeto de localização voltado para experiência de leitura, clareza textual e adaptação cuidadosa do contexto narrativo. O trabalho envolve decisões de estilo, terminologia e automação de fluxo para manter consistência ao longo do projeto.',
+              tech: ['Automação de Localização', 'Terminologia', "Português Formal"],
+              image: 'game3',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/playlist?list=PL6dHvngBG8bomf_DftE3BdgQdNuoDLw1P',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://fatecafe.vercel.app/#/traducoes/mahou-tsukai-no-yoru',
+              },
+            },
           ],
         },
         {
-          title: 'Criacao de Conteudo',
-          items: [
-            'Roteiros curtos para videos educativos',
-            'Posts de tecnologia para redes sociais',
-            'Materiais de apoio para comunicacao de marca',
+          title: 'Criação de Conteúdo',
+          projects: [
+            {
+              title: 'Vídeo de Conteúdo 01',
+              description: 'Conteúdo em vídeo com foco em apresentação, ritmo narrativo e organização clara da informação, e experiência.',
+              tech: ['Roteiro', 'Edição', 'YouTube'],
+              thumbnail: 'y-DoblS-J6A',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=y-DoblS-J6A&t=587s',
+              },
+            },
+            {
+              title: 'Vídeo de Conteúdo 02',
+              description: 'Produção de vídeo longa com atenção a estrutura de pauta, comunicação e retenção do público.',
+              tech: ['Apresentação', 'Edição', 'Storytelling'],
+              thumbnail: 'VdlFNCfNmL0',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=VdlFNCfNmL0&t=12460s',
+              },
+            },
+            {
+              title: 'Vídeo de Conteúdo 03',
+              description: 'Projeto audiovisual voltado para entrega de conteúdo com clareza, ritmo e suporte visual.',
+              tech: ['Conteúdo', 'Edição', 'Publicação'],
+              thumbnail: 'ohtHvN2MKU8',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=ohtHvN2MKU8',
+              },
+            },
           ],
         },
       ],
@@ -198,30 +319,152 @@ const content = {
     },
     projects: {
       title: 'Projects',
-      subtitle: 'Projects grouped by area for easier navigation.',
+      subtitle: 'A curated selection of projects in development, translation, and content creation.',
       sections: [
         {
           title: 'Development',
-          items: [
-            'Responsive landing page for local business',
-            'Simple dashboard for goal tracking',
-            'Task app with local persistence',
+          projects: [
+            {
+              title: 'Fate Cafe React',
+              description: 'A themed landing page focused on responsive layout and polished visual presentation.',
+              longDescription:
+                'Fate Cafe React is a hub designed to centralize Type-Moon data, translations, guides, and information in Portuguese. The project was built to offer clear navigation, comfortable reading, and a solid foundation for continuous content expansion.',
+              tech: ['React', 'Vite', 'CSS3', 'Vercel'],
+              image: 'proj1',
+              primaryAction: {
+                type: 'github',
+                label: 'GitHub',
+                href: 'https://github.com/ThiagoKrz/fate-cafe-react',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://fatecafe.vercel.app/',
+              },
+            },
+            {
+              title: 'KrEventos',
+              description: 'A web project built around event presentation, information structure, and clean visual organization.',
+              longDescription:
+                'KrEventos is a web system focused on registering, organizing, and presenting events in a responsive interface. The project emphasizes structured information, easier readability, and a visual experience that stays objective, clean, and functional.',
+              tech: ['React', 'JavaScript', 'CSS3'],
+              image: 'proj2',
+              primaryAction: {
+                type: 'github',
+                label: 'GitHub',
+                href: 'https://github.com/ThiagoKrz/KrEventos',
+              },
+            },
+            {
+              title: 'AgendaClinicaSer Server',
+              description: 'A clinical management back-end focused on routes, services, and application structure.',
+              longDescription:
+                'AgendaClinicaSer Server is a back-end project created to support clinical management flows, with a strong focus on route organization, services, and internal application structure. The project prioritizes architectural clarity, maintainability, and front-end integration readiness.',
+              tech: ['Node.js', 'Express', 'REST API'],
+              image: 'proj3',
+              primaryAction: {
+                type: 'github',
+                label: 'GitHub',
+                href: 'https://github.com/ThiagoKrz/agendaclinicaser-server',
+              },
+            },
           ],
         },
         {
           title: 'Translation',
-          items: [
-            'Digital product guide localization',
-            'Technical documentation adaptation',
-            'Institutional text review EN/PT-BR',
+          projects: [
+            {
+              title: 'Fate/GO',
+              description: 'A translation project focused on text adaptation, narrative context, and terminology consistency.',
+              longDescription:
+                'The Fate/GO translation project focuses on content adaptation with special attention to narrative context, terminology consistency, and final reading quality in Portuguese. The work includes coordination, review, and localization decisions meant to preserve identity and flow.',
+              tech: ['Localization', 'Review', 'Terminology'],
+              image: 'game1',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=tJPDcEIBF_4',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://chaldea-br.vercel.app/',
+              },
+            },
+            {
+              title: 'Tsukihime Remake',
+              description: 'A translation and cultural adaptation effort focused on tone, readability, and fidelity.',
+              longDescription:
+                'Tsukihime Remake combines translation, textual adaptation, and editorial care to preserve tone, readability, and fidelity to the source material. The project aims to deliver natural Portuguese while keeping narrative nuances, style, and scene intent intact.',
+              tech: ['Translation', 'Cultural adaptation', 'Text QA'],
+              image: 'game2',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=nopL0xeA4DM',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://fatecafe.vercel.app/#/traducoes/tsukihime-remake',
+              },
+            },
+            {
+              title: 'Witch on the Holy Night',
+              description: 'A localization project focused on player experience, clarity, and narrative context.',
+              longDescription:
+                'Witch on the Holy Night is a localization project centered on reading experience, textual clarity, and careful narrative adaptation. The work involves style choices, terminology management, and workflow automation to maintain consistency throughout the project.',
+              tech: ['PT-BR Localization', 'Review', 'Terminology'],
+              image: 'game3',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/playlist?list=PL6dHvngBG8bomf_DftE3BdgQdNuoDLw1P',
+              },
+              secondaryAction: {
+                type: 'demo',
+                label: 'Demo',
+                href: 'https://fatecafe.vercel.app/#/traducoes/mahou-tsukai-no-yoru',
+              },
+            },
           ],
         },
         {
           title: 'Content Creation',
-          items: [
-            'Short scripts for educational videos',
-            'Technology posts for social media',
-            'Support materials for brand communication',
+          projects: [
+            {
+              title: 'Content Video 01',
+              description: 'Video content project focused on presentation, pacing, and clear information structure.',
+              tech: ['Script', 'Editing', 'YouTube'],
+              thumbnail: 'y-DoblS-J6A',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=y-DoblS-J6A&t=587s',
+              },
+            },
+            {
+              title: 'Content Video 02',
+              description: 'Long-form video production with attention to structure, communication, and audience retention.',
+              tech: ['Presentation', 'Editing', 'Storytelling'],
+              thumbnail: 'VdlFNCfNmL0',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=VdlFNCfNmL0&t=12460s',
+              },
+            },
+            {
+              title: 'Content Video 03',
+              description: 'Audiovisual project built to deliver content with clarity, pacing, and visual support.',
+              tech: ['Content', 'Editing', 'Publishing'],
+              thumbnail: 'ohtHvN2MKU8',
+              primaryAction: {
+                type: 'youtube',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/watch?v=ohtHvN2MKU8',
+              },
+            },
           ],
         },
       ],
