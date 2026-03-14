@@ -129,6 +129,20 @@ main {
   position: relative;
 }
 
+.mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.mobile-menu-toggle {
+  background: color-mix(in oklab, var(--surface) 86%, var(--brand-brown));
+}
+
+.mobile-menu-panel {
+  display: none;
+}
+
 .lang-menu {
   position: absolute;
   top: calc(100% + 0.4rem);
@@ -579,15 +593,81 @@ main {
   .navbar {
     width: 100%;
     margin-left: 0;
-    padding: 0.9rem 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    padding: 0.65rem 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .brand-btn {
+    margin-right: auto;
+    font-size: 1.3rem;
+    padding: 0.35rem 0.5rem;
   }
 
   .nav-right {
-    width: 100%;
-    justify-content: flex-start;
+    display: none;
+  }
+
+  .mobile-controls {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .mobile-controls .icon-link {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .mobile-controls .icon-link svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .mobile-menu-panel {
+    display: grid;
+    gap: 0.5rem;
+    width: min(94vw, 340px);
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: 0.9rem;
+    box-shadow: var(--shadow);
+    padding: 0.65rem;
+    z-index: 12;
+  }
+
+  .mobile-menu-link {
+    color: var(--text-h);
+    text-decoration: none;
+    padding: 0.62rem 0.68rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .mobile-menu-link:hover,
+  .mobile-menu-link.active {
+    background: color-mix(in oklab, var(--surface-soft) 86%, var(--brand-brown));
+  }
+
+  .mobile-menu-row {
+    display: flex;
+    gap: 0.45rem;
+  }
+
+  .mobile-language-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+  }
+
+  .mobile-language-row .lang-option {
+    justify-content: center;
   }
 
   .hero,
