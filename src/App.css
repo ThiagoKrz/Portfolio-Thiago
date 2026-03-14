@@ -41,8 +41,8 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 1.3rem;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  margin-left: 0;
   padding: 0.9rem clamp(1rem, 4vw, 3rem);
 }
 
@@ -685,6 +685,34 @@ main {
   gap: 1rem;
 }
 
+.projects-page {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.projects-page .page-title {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  padding-bottom: 0.35rem;
+}
+
+.projects-page .page-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 0.95rem);
+  height: 3px;
+  background: currentColor;
+  opacity: 0.9;
+  border-radius: 999px;
+}
+
+.projects-scroll-hint {
+  display: none;
+}
+
 .projects-group-title {
   margin: 0;
   font-size: clamp(1.5rem, 3vw, 2.15rem);
@@ -711,6 +739,11 @@ main {
   display: grid;
   grid-template-rows: 173px 253px;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.projects-group:nth-of-type(2) .project-showcase-card {
+  height: 472px;
+  grid-template-rows: 173px 299px;
 }
 
 .project-showcase-card:has(.project-showcase-media:hover),
@@ -758,6 +791,10 @@ main {
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 0.75rem;
+}
+
+.projects-group:nth-of-type(2) .project-showcase-body {
+  height: 299px;
 }
 
 .project-showcase-copy {
@@ -857,21 +894,11 @@ main {
   overflow-y: auto;
 }
 
-.project-overlay-backdrop {
-  position: fixed;
-  inset: 0;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background: transparent;
-  cursor: default;
-}
-
 .project-modal {
   position: relative;
   z-index: 1;
   width: min(100%, 1020px);
-  max-height: min(90svh, 920px);
+  max-height: min(94svh, 920px);
   overflow: auto;
   border-radius: 1.35rem;
   border: 1px solid color-mix(in oklab, var(--border) 70%, var(--brand-brown));
@@ -901,8 +928,8 @@ main {
 
 .project-modal-media {
   position: relative;
-  height: min(42svh, 420px);
-  min-height: 220px;
+  height: min(30svh, 300px);
+  min-height: 175px;
   overflow: hidden;
 }
 
@@ -916,20 +943,20 @@ main {
 .project-modal-title-shell {
   position: absolute;
   inset: auto 0 0;
-  padding: 1.35rem 1.4rem 1rem;
+  padding: 1rem 1.1rem 0.8rem;
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .project-modal-title-shell h2 {
   margin: 0;
   color: #fff;
-  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  font-size: clamp(1.25rem, 2.35vw, 1.95rem);
 }
 
 .project-modal-body {
   display: grid;
-  gap: 1rem;
-  padding: 1.25rem 1.35rem 1.35rem;
+  gap: 0.65rem;
+  padding: 0.9rem 1rem 1rem;
 }
 
 .project-tech-list-modal {
@@ -938,9 +965,67 @@ main {
 
 .project-modal-description {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.93rem;
+  line-height: 1.45;
   color: var(--text);
+  white-space: pre-line;
+}
+
+@keyframes projectsArrowFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 641px) {
+  .projects-group-lead {
+    min-height: calc(100svh - 250px);
+    align-content: start;
+    grid-template-rows: auto auto auto 1fr;
+  }
+
+  .projects-group-lead .projects-showcase-grid {
+    align-self: start;
+  }
+
+  .projects-scroll-hint {
+    display: inline-grid;
+    justify-self: center;
+    align-self: start;
+    gap: 0.3rem;
+    border: 0;
+    background: transparent;
+    color: color-mix(in oklab, var(--text-h) 76%, var(--border));
+    cursor: pointer;
+    padding: 0.16rem 0.42rem 0;
+    margin-top: 0.18rem;
+    animation: projectsArrowFloat 1.6s ease-in-out infinite;
+  }
+
+  .projects-scroll-hint-line {
+    width: 1.5px;
+    height: 24px;
+    justify-self: center;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  .projects-scroll-hint svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .projects-sections {
+    width: 100%;
+    overflow-x: clip;
+  }
 }
 
 .project-card {
@@ -1006,53 +1091,191 @@ main {
 
 .about-page {
   display: grid;
-  gap: 1.4rem;
+  gap: 0.6rem;
 }
 
-.about-intro {
+.about-full-section {
+  min-height: calc(100svh - 138px);
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.8rem);
+}
+
+.about-hero-full {
+  min-height: auto;
+  padding: 0.95rem;
+}
+
+.about-hero-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 280px) 1fr;
+  grid-template-columns: 500px minmax(0, 1fr);
+  min-height: 645px;
   align-items: center;
-  gap: 1.6rem;
+  justify-items: center;
+  gap: clamp(1rem, 2.2vw, 2rem);
 }
 
-.about-hero-box {
-  min-height: calc(100svh - 180px);
-}
-
-.photo-frame {
-  display: grid;
-  place-items: center;
-  width: min(260px, 100%);
-  aspect-ratio: 1 / 1;
-  border-radius: 1.6rem;
+.about-photo-tall-frame {
+  width: 500px;
+  height: 645px;
+  border-radius: 1.35rem;
   border: 1px solid color-mix(in oklab, var(--border) 70%, var(--brand-brown));
   background: linear-gradient(
     135deg,
     color-mix(in oklab, var(--surface-soft) 86%, var(--brand-brown)) 0%,
     color-mix(in oklab, var(--surface) 78%, var(--brand-brown)) 100%
   );
+  display: grid;
+  place-items: center;
   overflow: hidden;
 }
 
-.profile-photo {
+.about-profile-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.resume-section {
-  margin-top: 18svh;
+.about-hero-copy {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 0.8rem;
+  max-width: 72ch;
 }
 
-.resume-sheet {
-  margin-top: 1rem;
+.about-hero-eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--text-h) 65%, var(--brand-brown));
+  font-weight: 700;
+}
+
+.about-hero-bio {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  line-height: 1.6;
+}
+
+.about-scroll-hint {
+  justify-self: center;
+  display: inline-grid;
+  gap: 0.32rem;
+  border: 0;
+  background: transparent;
+  color: color-mix(in oklab, var(--text-h) 76%, var(--border));
+  cursor: pointer;
+  padding: 0.08rem 0.35rem 0;
+  animation: aboutArrowFloat 1.7s ease-in-out infinite;
+}
+
+.about-scroll-hint-outside {
+  margin: 0.15rem auto 0.55rem;
+}
+
+.about-scroll-hint-line {
+  width: 1.2px;
+  height: 18px;
+  justify-self: center;
+  background: currentColor;
+  opacity: 0.58;
+}
+
+.about-scroll-hint svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.about-resume-full {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: start;
+}
+
+.about-resume-title {
+  margin: 0;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+}
+
+.about-resume-grid {
+  margin-top: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.about-resume-card {
   border-radius: 1rem;
   border: 1px dashed color-mix(in oklab, var(--border) 62%, var(--brand-brown));
   background: var(--surface-soft);
-  padding: 1rem;
+  padding: 0.95rem 1rem;
   display: grid;
-  gap: 0.65rem;
+  gap: 0.62rem;
+}
+
+.about-resume-card h3 {
+  margin: 0;
+  font-size: 1.03rem;
+  color: var(--text-h);
+}
+
+.about-resume-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.about-public-links {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about-public-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  padding: 0.5rem 0.78rem;
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in oklab, var(--border) 65%, var(--brand-brown));
+  background: color-mix(in oklab, var(--surface-soft) 84%, var(--brand-brown));
+  color: var(--text-h);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about-public-link svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.about-public-link:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+@keyframes aboutArrowFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1185,12 +1408,43 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .about-hero-box {
+  .about-full-section {
     min-height: auto;
   }
 
-  .resume-section {
-    margin-top: 0.6rem;
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 0.85rem;
+  }
+
+  .about-photo-tall-frame {
+    width: min(100%, 330px);
+    height: auto;
+    aspect-ratio: 500 / 645;
+  }
+
+  .about-hero-copy {
+    gap: 0.65rem;
+  }
+
+  .about-scroll-hint-outside {
+    margin-top: 0.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .about-resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-resume-card {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .about-resume-list {
+    padding-left: 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.36;
   }
 
   .page-section {
@@ -1212,17 +1466,24 @@ main {
     justify-items: center;
   }
 
+  .project-overlay {
+    align-items: center;
+    padding: 1rem;
+  }
+
   .project-modal {
     width: min(100%, 620px);
-    max-height: 92svh;
+    max-height: 94svh;
   }
 
   .project-modal-media {
-    height: min(31svh, 250px);
+    height: min(24svh, 185px);
+    min-height: 140px;
   }
 
   .project-modal-body {
-    padding: 1rem;
+    gap: 0.58rem;
+    padding: 0.8rem 0.85rem 0.9rem;
   }
 
   .skills-grid .skill-card {

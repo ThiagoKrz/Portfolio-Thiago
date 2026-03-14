@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Smooth from '../animations/Smooth'
 import { useSite } from '../context/SiteContext'
 import game1 from '../assets/game1.png'
@@ -58,11 +58,20 @@ function ActionIcon({ type }) {
 function ProjectsPage() {
   const { t } = useSite()
   const [activeProject, setActiveProject] = useState(null)
+  const [hasScrolledDesktop, setHasScrolledDesktop] = useState(false)
+  const projectModalRef = useRef(null)
+
+  const scrollToSection = (sectionIndex) => {
+    const nextSection = document.getElementById(`projects-group-${sectionIndex}`)
+    nextSection?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   useEffect(() => {
     if (!activeProject) return undefined
 
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (!window.matchMedia('(max-width: 640px)').matches) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -73,6 +82,29 @@ function ProjectsPage() {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [activeProject])
+
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 641px)')
+
+    const syncScrollState = () => {
+      if (!media.matches || hasScrolledDesktop) {
+        return
+      }
+
+      if (window.scrollY > 40) {
+        setHasScrolledDesktop(true)
+      }
+    }
+
+    syncScrollState()
+    window.addEventListener('scroll', syncScrollState, { passive: true })
+    media.addEventListener('change', syncScrollState)
+
+    return () => {
+      window.removeEventListener('scroll', syncScrollState)
+      media.removeEventListener('change', syncScrollState)
+    }
+  }, [hasScrolledDesktop])
 
   const openProject = (project) => {
     if (project.thumbnail) {
@@ -88,11 +120,10 @@ function ProjectsPage() {
 
   return (
     <motion.section
-      className="page-section"
+      className="page-section projects-page"
       initial={{ opacity: 0, y: 90 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={Smooth}
-      viewport={{ once: true, amount: 0.25 }}
     >
       <h1 className="page-title">{t.projects.title}</h1>
       <p className="section-subtitle">{t.projects.subtitle}</p>
@@ -101,11 +132,11 @@ function ProjectsPage() {
         {t.projects.sections.map((section, sectionIndex) => (
           <motion.section
             key={section.title}
-            className="projects-group"
+            id={`projects-group-${sectionIndex}`}
+            className={`projects-group${sectionIndex === 0 && !hasScrolledDesktop ? ' projects-group-lead' : ''}`}
             initial={{ opacity: 0, y: 90 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ ...Smooth, delay: sectionIndex * 0.08 }}
-            viewport={{ once: true, amount: 0.18 }}
           >
             <h2 className="projects-group-title">{section.title}</h2>
 
@@ -121,9 +152,8 @@ function ProjectsPage() {
                     key={project.title}
                     className="project-showcase-card"
                     initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ ...Smooth, delay: sectionIndex * 0.08 + projectIndex * 0.06 }}
-                    viewport={{ once: true, amount: 0.2 }}
                   >
                     <button
                       type="button"
@@ -188,6 +218,20 @@ function ProjectsPage() {
                 )
               })}
             </div>
+
+            {sectionIndex === 0 && !hasScrolledDesktop ? (
+              <button
+                type="button"
+                className="projects-scroll-hint"
+                onClick={() => scrollToSection(1)}
+                aria-label="Rolar para a próxima seção de projetos"
+              >
+                <span className="projects-scroll-hint-line" />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            ) : null}
           </motion.section>
         ))}
       </div>
@@ -200,15 +244,14 @@ function ProjectsPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.24, ease: Smooth.ease }}
+            onMouseDown={(event) => {
+              if (!projectModalRef.current?.contains(event.target)) {
+                setActiveProject(null)
+              }
+            }}
           >
-            <button
-              type="button"
-              className="project-overlay-backdrop"
-              aria-label="Fechar detalhes do projeto"
-              onClick={() => setActiveProject(null)}
-            />
-
             <motion.article
+              ref={projectModalRef}
               className="project-modal"
               initial={{ opacity: 0, y: 40, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
