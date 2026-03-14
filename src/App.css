@@ -1279,19 +1279,10 @@ main {
 }
 
 @media (max-width: 640px) {
-  html,
-  body,
-  #root,
-  .portfolio,
-  main,
-  .language-fade-shell {
-    overflow-x: clip;
-  }
-
   .navbar {
-    width: 100dvw;
+    width: 100vw;
     max-width: none;
-    margin-left: calc(50% - 50dvw);
+    margin-left: calc(50% - 50vw);
     padding: 0.65rem calc(0.5rem + env(safe-area-inset-right)) 0.65rem calc(0.5rem + env(safe-area-inset-left));
     flex-direction: row;
     align-items: center;
