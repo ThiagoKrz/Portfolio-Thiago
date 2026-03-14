@@ -9,7 +9,7 @@ function AboutPage() {
   return (
     <div className="about-page">
       <motion.section
-        className="section about-intro about-hero-box"
+        className="section about-intro"
         initial={{ opacity: 0, y: 90 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={Smooth}

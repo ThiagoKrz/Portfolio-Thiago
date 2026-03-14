@@ -7,7 +7,7 @@ function ProjectsPage() {
 
   return (
     <motion.section
-      className="section page-section"
+      className="page-section"
       initial={{ opacity: 0, y: 90 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={Smooth}

@@ -2,9 +2,9 @@ const content = {
   'pt-BR': {
     nav: {
       home: 'Home',
-      skills: 'Skills',
-      projects: 'Projects',
-      about: 'About',
+      skills: 'Habilidades',
+      projects: 'Projetos',
+      about: 'Sobre',
       themeLabel: 'Alternar tema',
       languageLabel: 'Idioma',
     },
@@ -17,8 +17,8 @@ const content = {
       photoAlt: 'Foto de Thiago Krauzer',
       intro:
         'Construindo projetos em front-end com React e Vite, sempre evoluindo com foco em performance, clareza de codigo e boa experiencia para o usuario.',
-      ctaProjects: 'Ver projetos',
-      ctaBio: 'Ler minha bio',
+      ctaProjects: 'Projetos',
+      ctaBio: 'Sobre mim',
       highlightsTitle: 'Destaques',
       cards: [
         {
@@ -36,40 +36,48 @@ const content = {
       ],
     },
     skills: {
-      title: 'Skills',
-      subtitle: 'Minhas habilidades estao organizadas em tres frentes principais.',
+      title: 'Habilidades',
       categories: [
         {
-          title: 'Tech',
+          title: 'Desenvolvimento Frontend',
           items: [
-            'React e componentizacao',
-            'Vite e configuracao de projeto',
-            'JavaScript (ES6+)',
-            'HTML semantico e CSS responsivo',
+            'React, TypeScript e ecossistema Vite',
+            'Angular e integração com APIs',
+            'Estilização utilitária com Tailwind CSS',
+            'HTML semântico e componentização',
           ],
         },
         {
-          title: 'Traducao',
+          title: 'Desenvolvimento Backend',
           items: [
-            'Traducao EN -> PT-BR',
-            'Adaptacao de tom de voz',
-            'Revisao de consistencia textual',
-            'Localizacao para contexto brasileiro',
+            'APIs RESTful em C# e .NET',
+            'Node.js para APIs e serviços',
+            'Python para automação e scripts',
+            'Banco de Dados SQL Server e ORM',
           ],
         },
         {
-          title: 'Comunicacao & Media',
+          title: 'Localização e Engenharia Reversa',
           items: [
-            'Storytelling para conteudo tecnico',
-            'Planejamento de pauta e calendario',
-            'Escrita para redes sociais',
-            'Edicao basica de imagem e video',
+            'Localização EN-US para PT-BR (Nível C1)',
+            'Transcriação imersiva e adaptação cultural',
+            'Engenharia reversa de engines proprietárias',
+            'Criação de ferramentas de extração (Python/C#)',
+          ],
+        },
+        {
+          title: 'Soft Skills',
+          items: [
+            'Troubleshooting e resolução sob pressão (SLA)',
+            'Comunicação empática e suporte a usuários',
+            'Gestão e organização de projetos volumosos',
+            'Aprendizado ágil de novas tecnologias',
           ],
         },
       ],
     },
     projects: {
-      title: 'Projects',
+      title: 'Projetos',
       subtitle: 'Projetos agrupados por area para facilitar a navegacao.',
       sections: [
         {
@@ -99,7 +107,7 @@ const content = {
       ],
     },
     about: {
-      title: 'About',
+      title: 'Sobre',
       bio: 'Sou Thiago Krauzer, profissional em transicao para tecnologia, construindo uma base forte em desenvolvimento front-end com React. Tenho perfil multidisciplinar, unindo visao tecnica, traducao e comunicacao para criar experiencias digitais mais completas.',
       resumeTitle: 'Curriculo completo',
       resumeSubtitle: 'Espaco pronto para voce escrever seu curriculo detalhado a mao.',
@@ -148,33 +156,42 @@ const content = {
     },
     skills: {
       title: 'Skills',
-      subtitle: 'My skills are organized into three main areas.',
+      subtitle: 'My skills are organized into four main areas.',
       categories: [
         {
-          title: 'Tech',
+          title: 'Front-end Development',
           items: [
-            'React and componentization',
-            'Vite and project setup',
-            'JavaScript (ES6+)',
-            'Semantic HTML and responsive CSS',
+            'React, TypeScript, and Vite ecosystem',
+            'Angular and API integration',
+            'Utility-first styling with Tailwind CSS',
+            'Semantic HTML and component architecture',
           ],
         },
         {
-          title: 'Translation',
+          title: 'Back-end Development',
           items: [
-            'EN -> PT-BR translation',
-            'Tone of voice adaptation',
-            'Text consistency review',
-            'Localization for Brazilian context',
+            'RESTful APIs with C# and .NET',
+            'Node.js for APIs and services',
+            'Python for automation and scripting',
+            'SQL Server databases and ORM',
           ],
         },
         {
-          title: 'Communication & Media',
+          title: 'Localization and Reverse Engineering',
           items: [
-            'Storytelling for technical content',
-            'Editorial planning and schedule',
-            'Social media writing',
-            'Basic image and video editing',
+            'EN-US to PT-BR localization (C1 level)',
+            'Immersive transcreation and cultural adaptation',
+            'Reverse engineering of proprietary engines',
+            'Extraction tooling development (Python/C#)',
+          ],
+        },
+        {
+          title: 'Soft Skills',
+          items: [
+            'Troubleshooting and pressure-based resolution (SLA)',
+            'Empathetic communication and user support',
+            'Management and organization of high-volume projects',
+            'Fast learning of new technologies',
           ],
         },
       ],

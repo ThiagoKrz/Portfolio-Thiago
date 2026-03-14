@@ -1,10 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { useSite } from '../context/SiteContext'
 import Navbar from './Navbar'
 
 function AppLayout() {
   const { language } = useSite()
+  const location = useLocation()
 
   return (
     <div className="portfolio">
@@ -12,7 +13,7 @@ function AppLayout() {
       <main>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
-            key={language}
+            key={`${language}-${location.pathname}`}
             className="language-fade-shell"
             initial={{ opacity: 0, y: 10, filter: 'blur(4px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
