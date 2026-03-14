@@ -607,16 +607,6 @@ main {
   transform: translateY(0);
 }
 
-.skills-grid .skill-card.is-open .skill-card-face {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.skills-grid .skill-card.is-open .skill-card-details {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .skill-card-header {
   display: grid;
   justify-items: center;
@@ -917,7 +907,7 @@ main {
     width: 100%;
     max-width: 460px;
     aspect-ratio: auto;
-    min-height: 260px;
+    min-height: auto;
     cursor: pointer;
   }
 
@@ -925,19 +915,57 @@ main {
   .skills-grid .skill-card:focus-within .skill-card-face,
   .skills-grid .skill-card:focus-visible .skill-card-face {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 
   .skills-grid .skill-card:hover .skill-card-details,
   .skills-grid .skill-card:focus-within .skill-card-details,
   .skills-grid .skill-card:focus-visible .skill-card-details {
     opacity: 0;
-    transform: translateY(10px);
+    transform: none;
   }
 
   .skills-grid .skill-card {
     padding: 0;
     display: block;
+  }
+
+  .skill-card-face,
+  .skill-card-details {
+    position: static;
+    inset: auto;
+    transform: none;
+    padding: 1rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.24s ease, padding 0.24s ease;
+  }
+
+  .skill-card-face {
+    opacity: 1;
+    display: grid;
+    max-height: 600px;
+  }
+
+  .skill-card-details {
+    opacity: 0;
+    display: grid;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .skills-grid .skill-card.is-open .skill-card-face {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .skills-grid .skill-card.is-open .skill-card-details {
+    opacity: 1;
+    max-height: 700px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .tech-grid {

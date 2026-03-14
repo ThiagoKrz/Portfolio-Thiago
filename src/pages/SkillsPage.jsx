@@ -1,5 +1,5 @@
 import { motion as Motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Smooth from '../animations/Smooth'
 import { useSite } from '../context/SiteContext'
 
@@ -300,20 +300,7 @@ const previewByLanguage = {
 function SkillsPage() {
   const { t, language } = useSite()
   const previewCards = previewByLanguage[language] || previewByLanguage.en
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return window.matchMedia('(max-width: 640px)').matches
-  })
   const [openCardIndex, setOpenCardIndex] = useState(null)
-
-  useEffect(() => {
-    const media = window.matchMedia('(max-width: 640px)')
-    const syncMobile = () => setIsMobile(media.matches)
-    syncMobile()
-
-    media.addEventListener('change', syncMobile)
-    return () => media.removeEventListener('change', syncMobile)
-  }, [])
 
   return (
     <Motion.section
@@ -336,14 +323,12 @@ function SkillsPage() {
             key={category.title}
             className={`project-card skill-card${isOpen ? ' is-open' : ''}`}
             tabIndex={0}
-            role={isMobile ? 'button' : undefined}
-            aria-expanded={isMobile ? isOpen : undefined}
+            role="button"
+            aria-expanded={isOpen}
             onClick={() => {
-              if (!isMobile) return
               setOpenCardIndex((prev) => (prev === index ? null : index))
             }}
             onKeyDown={(event) => {
-              if (!isMobile) return
               if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault()
                 setOpenCardIndex((prev) => (prev === index ? null : index))
