@@ -1279,14 +1279,29 @@ main {
 }
 
 @media (max-width: 640px) {
+  html,
+  body,
+  #root,
+  .portfolio,
+  main,
+  .language-fade-shell {
+    overflow-x: clip;
+  }
+
   .navbar {
-    width: 100%;
-    margin-left: 0;
-    padding: 0.65rem 0;
+    width: 100dvw;
+    max-width: none;
+    margin-left: calc(50% - 50dvw);
+    padding: 0.65rem calc(0.5rem + env(safe-area-inset-right)) 0.65rem calc(0.5rem + env(safe-area-inset-left));
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: none;
   }
 
   .brand-btn {
@@ -1378,13 +1393,17 @@ main {
   }
 
   .home-title-block {
+    width: 100%;
+    min-width: 0;
     min-height: 180px;
   }
 
   .home-role-main {
-    font-size: clamp(3rem, 13.5vw, 4.6rem);
+    font-size: clamp(2.4rem, 11.8vw, 4.2rem);
     line-height: 0.95;
     animation: homeTextReveal 0.68s 0.08s ease both;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .home-role-line {
@@ -1397,11 +1416,14 @@ main {
 
   .home-rotator {
     min-width: 0;
+    max-width: 100%;
     min-height: 3.4rem;
   }
 
   .home-rotator-word {
-    font-size: clamp(2.3rem, 10.4vw, 3.9rem);
+    font-size: clamp(2rem, 9.6vw, 3.6rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .about-intro {

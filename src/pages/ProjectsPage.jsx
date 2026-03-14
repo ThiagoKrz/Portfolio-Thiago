@@ -59,6 +59,7 @@ function ProjectsPage() {
   const { t } = useSite()
   const [activeProject, setActiveProject] = useState(null)
   const [hasScrolledDesktop, setHasScrolledDesktop] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(() => window.matchMedia('(min-width: 641px)').matches)
   const projectModalRef = useRef(null)
 
   const scrollToSection = (sectionIndex) => {
@@ -106,6 +107,21 @@ function ProjectsPage() {
     }
   }, [hasScrolledDesktop])
 
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 641px)')
+
+    const syncViewport = () => {
+      setIsDesktop(media.matches)
+    }
+
+    syncViewport()
+    media.addEventListener('change', syncViewport)
+
+    return () => {
+      media.removeEventListener('change', syncViewport)
+    }
+  }, [])
+
   const openProject = (project) => {
     if (project.thumbnail) {
       window.open(project.primaryAction.href, '_blank', 'noopener,noreferrer')
@@ -135,8 +151,14 @@ function ProjectsPage() {
             id={`projects-group-${sectionIndex}`}
             className={`projects-group${sectionIndex === 0 && !hasScrolledDesktop ? ' projects-group-lead' : ''}`}
             initial={{ opacity: 0, y: 90 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ...Smooth, delay: sectionIndex * 0.08 }}
+            animate={!isDesktop ? { opacity: 1, y: 0 } : undefined}
+            whileInView={isDesktop ? { opacity: 1, y: 0 } : undefined}
+            transition={{
+              ...Smooth,
+              duration: isDesktop ? 1.55 : Smooth.duration,
+              delay: sectionIndex * (isDesktop ? 0.2 : 0.08),
+            }}
+            viewport={isDesktop ? { once: true, amount: 0.2 } : undefined}
           >
             <h2 className="projects-group-title">{section.title}</h2>
 
@@ -152,8 +174,14 @@ function ProjectsPage() {
                     key={project.title}
                     className="project-showcase-card"
                     initial={{ opacity: 0, y: 60 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ ...Smooth, delay: sectionIndex * 0.08 + projectIndex * 0.06 }}
+                    animate={!isDesktop ? { opacity: 1, y: 0 } : undefined}
+                    whileInView={isDesktop ? { opacity: 1, y: 0 } : undefined}
+                    transition={{
+                      ...Smooth,
+                      duration: isDesktop ? 1.35 : Smooth.duration,
+                      delay: sectionIndex * (isDesktop ? 0.14 : 0.08) + projectIndex * (isDesktop ? 0.1 : 0.06),
+                    }}
+                    viewport={isDesktop ? { once: true, amount: 0.16 } : undefined}
                   >
                     <button
                       type="button"

@@ -9,29 +9,29 @@ const content = {
       languageLabel: 'Idioma',
     },
     home: {
-      eyebrow: 'Portfolio de Desenvolvedor Iniciante',
+      eyebrow: 'Portfólio de Desenvolvedor Iniciante',
       titleLead: 'Oi, eu sou',
       name: 'Thiago Krauzer',
       primaryRole: 'Desenvolvedor',
-      rotatingRoles: ['Editor de Video', 'Tradutor', 'Designer'],
+      rotatingRoles: ['Editor de Vídeo', 'Tradutor', 'Designer'],
       photoAlt: 'Foto de Thiago Krauzer',
       intro:
-        'Construindo projetos em front-end com React e Vite, sempre evoluindo com foco em performance, clareza de codigo e boa experiencia para o usuario.',
+        'Construindo projetos em front-end com React e Vite, sempre evoluindo com foco em performance, clareza de código e boa experiência para o usuário.',
       ctaProjects: 'Projetos',
       ctaBio: 'Sobre mim',
       highlightsTitle: 'Destaques',
       cards: [
         {
-          title: 'Front-end em evolucao continua',
-          text: 'Estudos diarios em React, componentizacao, hooks e consumo de APIs.',
+          title: 'Front-end em evolução contínua',
+          text: 'Estudos diários em React, componentização, hooks e consumo de APIs.',
         },
         {
-          title: 'Traducao e adaptacao de conteudo',
-          text: 'Experiencia em adaptar textos para publico tecnico e nao tecnico.',
+          title: 'Tradução e adaptação de conteúdo',
+          text: 'Experiência em adaptar textos para público técnico e não técnico.',
         },
         {
-          title: 'Comunicacao digital',
-          text: 'Criacao de materiais com foco em clareza, alcance e contexto.',
+          title: 'Comunicação digital',
+          text: 'Criação de materiais com foco em clareza, alcance e contexto.',
         },
       ],
     },
@@ -230,7 +230,7 @@ const content = {
     about: {
       title: 'Sobre',
       eyebrow: 'Perfil Profissional',
-      bio: 'Profissional de TI e graduando em Sistemas de Informacao, com atuacao em suporte tecnico, gestao de incidentes e estabilidade de ambiente corporativo. Experiencia com atendimento N1/N2, troubleshooting de hardware e software, provisionamento de usuarios e comunicacao clara com foco em SLA e experiencia do usuario.',
+      bio: 'Olá, meu nome é Thiago Krauzer, sou profissional de TI e graduado em Sistemas de Informação, com atuação em suporte técnico, gestão de incidentes e estabilidade de ambiente corporativo. Experiência com atendimento N1/N2, troubleshooting de hardware e software, provisionamento de usuários e comunicação clara com foco em SLA e experiência do usuário.',
       scrollHintLabel: 'Rolar para a seção de currículo',
       resumeTitle: 'Experiência e Competências',
       resumeSubtitle: 'Resumo curricular com foco técnico, operação e entrega de resultados em ambientes de missão crítica.',
@@ -238,37 +238,37 @@ const content = {
         {
           title: 'Resumo Profissional',
           items: [
-            'Atuacao em suporte tecnico, atendimento ao usuario e resolucao de incidentes via ITSM.',
-            'Vivencia com Windows, MacOS, Microsoft Office, Google Workspace, Active Directory e MDM.',
-            'Perfil organizado, comunicativo e orientado a melhoria continua e estabilidade operacional.',
+            'Atuação em suporte técnico, atendimento ao usuário e resolução de incidentes via ITSM.',
+            'Vivência com Windows, MacOS, Microsoft Office, Google Workspace, Active Directory e MDM.',
+            'Perfil organizado, comunicativo e orientado à melhoria contínua e estabilidade operacional.',
           ],
         },
         {
           title: 'Formação Acadêmica',
-          items: ['Bacharelado em Sistemas de Informacao - UNINASSAU 2021/2024.'],
+          items: ['Bacharelado em Sistemas de Informação - UNINASSAU 2021/2024.'],
         },
         {
           title: 'Experiência Profissional',
           items: [
-            'Tecnico de Informatica | UNINASSAU (fev/2025 - atual): incidentes e service requests, suporte remoto/presencial, provisionamento e documentacao tecnica.',
-            'Tecnico de TI Autonomo (PJ) | CERB Consulting (mai/2025 - mar/2026): suporte sob demanda, inventario de ativos e resolucao de incidentes de media/alta complexidade.',
-            'Estagiario de Suporte de TI | Tribunal de Justica de Rondonia (mai/2022 - mai/2024): suporte N1/N2, manutencao de infraestrutura e participacao em sistemas criticos.',
+            'Técnico de Informática | UNINASSAU (fev/2025 - atual): incidentes e service requests, suporte remoto/presencial, provisionamento e documentação técnica.',
+            'Técnico de TI Autônomo (PJ) | CERB Consulting (mai/2025 - mar/2026): suporte sob demanda, inventário de ativos e resolução de incidentes de média/alta complexidade.',
+            'Estagiário de Suporte de TI | Tribunal de Justiça de Rondônia (mai/2022 - mai/2024): suporte N1/N2, manutenção de infraestrutura e participação em sistemas críticos.',
           ],
         },
         {
           title: 'Competências Técnicas',
           items: [
-            'Gestao de incidentes e requests (Jira, Lecom), suporte remoto e troubleshooting.',
+            'Gestão de incidentes e requests (Jira, Lecom), suporte remoto e troubleshooting.',
             'Windows Desktop/Server, MacOS, Microsoft Office, Google Workspace e Active Directory.',
-            'Manutencao de hardware, infraestrutura, inventario de ativos e gestao de dispositivos moveis (MDM).',
+            'Manutenção de hardware, infraestrutura, inventário de ativos e gestão de dispositivos móveis (MDM).',
           ],
         },
         {
           title: 'Idiomas e Diferenciais',
           items: [
-            'Portugues nativo e Ingles fluente (C1 - CEFR).',
-            'Comunicacao empatica, organizacao de demandas multiplas e tomada de decisao sob pressao.',
-            'Colaboracao em equipes hibridas/remotas e aprendizado rapido de novas ferramentas.',
+            'Português nativo e Inglês fluente (C1 - CEFR).',
+            'Comunicação empática, organização de demandas múltiplas e tomada de decisão sob pressão.',
+            'Colaboração em equipes híbridas/remotas e aprendizado rápido de novas ferramentas.',
           ],
         },
       ],
@@ -372,9 +372,9 @@ const content = {
           projects: [
             {
               title: 'Fate Cafe React',
-              description: 'A themed landing page focused on responsive layout and polished visual presentation.',
+              description: 'A data, translations, guides, and information hub for Type-Moon content in Portuguese.',
               longDescription:
-                'Fate Cafe React is a hub designed to centralize Type-Moon data, translations, guides, and information in Portuguese. The project was built to offer clear navigation, comfortable reading, and a solid foundation for continuous content expansion.',
+                'Fate Cafe React is a hub built to centralize data, translations, guides, and information related to the Type-Moon universe in Portuguese. The project was designed to provide clear navigation, comfortable reading, and a solid foundation for continuous content expansion within the Brazilian community.',
               tech: ['React', 'Vite', 'CSS3', 'Vercel'],
               image: 'proj1',
               primaryAction: {
@@ -390,10 +390,10 @@ const content = {
             },
             {
               title: 'KrEventos',
-              description: 'A web project built around event presentation, information structure, and clean visual organization.',
+              description: 'A responsive system for event registration and content structuring.',
               longDescription:
-                'KrEventos is a web system focused on registering, organizing, and presenting events in a responsive interface. The project emphasizes structured information, easier readability, and a visual experience that stays objective, clean, and functional.',
-              tech: ['React', 'JavaScript', 'CSS3'],
+                'KrEventos is a web system focused on event registration, organization, and presentation through a responsive interface. The project emphasizes well-structured information, better readability, and a visual experience that remains objective and functional.',
+              tech: ['C#', '.NET', 'Angular'],
               image: 'proj2',
               primaryAction: {
                 type: 'github',
@@ -402,11 +402,11 @@ const content = {
               },
             },
             {
-              title: 'AgendaClinicaSer Server',
-              description: 'A clinical management back-end focused on routes, services, and application structure.',
+              title: 'Polyclinic Agenda',
+              description: 'Clinical management back-end focused on routes, service structure, and application organization.',
               longDescription:
-                'AgendaClinicaSer Server is a back-end project created to support clinical management flows, with a strong focus on route organization, services, and internal application structure. The project prioritizes architectural clarity, maintainability, and front-end integration readiness.',
-              tech: ['Node.js', 'Express', 'REST API'],
+                'Polyclinic Agenda is a back-end developed to support clinical management workflows, with strong attention to route organization, services, and internal application structure. The project prioritizes architectural clarity, future maintainability, and a solid base for front-end integration.',
+              tech: ['Node.js', 'Angular', 'REST API'],
               image: 'proj3',
               primaryAction: {
                 type: 'github',
@@ -420,11 +420,11 @@ const content = {
           title: 'Translation',
           projects: [
             {
-              title: 'Fate/GO',
-              description: 'A translation project focused on text adaptation, narrative context, and terminology consistency.',
+              title: 'Fate/Grand Order',
+              description: 'Large-scale localization leadership for a live-service game, including translation, revision, and promotional content for the Brazilian community.',
               longDescription:
-                'The Fate/GO translation project focuses on content adaptation with special attention to narrative context, terminology consistency, and final reading quality in Portuguese. The work includes coordination, review, and localization decisions meant to preserve identity and flow.',
-              tech: ['Localization', 'Review', 'Terminology'],
+                'Localization leadership for Fate/Grand Order from Orleans to Lostbelt 5.1, with continuous delivery management under a live-service cycle.\n\nKey skills:\n• Management of regular updates and delivery deadlines.\n• EN-US to PT-BR transcreation preserving tone and character personality.\n• Editing, translation, and release of trailers to engage the community.',
+              tech: ['Live-Service', 'Transcreation', 'Localization', 'Trailer Editing'],
               image: 'game1',
               primaryAction: {
                 type: 'youtube',
@@ -439,10 +439,10 @@ const content = {
             },
             {
               title: 'Tsukihime Remake',
-              description: 'A translation and cultural adaptation effort focused on tone, readability, and fidelity.',
+              description: 'Multidisciplinary project leadership combining management, romhacking, reverse engineering, and full Visual Novel localization.',
               longDescription:
-                'Tsukihime Remake combines translation, textual adaptation, and editorial care to preserve tone, readability, and fidelity to the source material. The project aims to deliver natural Portuguese while keeping narrative nuances, style, and scene intent intact.',
-              tech: ['Translation', 'Cultural adaptation', 'Text QA'],
+                'Project leadership and development for the full localization of Tsukihime, combining romhacking, reverse engineering, and textual revision.\n\nKey skills:\n• Coordination of translators and reviewers with versioning in Git and Drive.\n• Safe text extraction, modification, and reinjection into the game engine.\n• Localization of trailers and openings with visual and linguistic consistency.',
+              tech: ['Leadership', 'Romhacking', 'Reverse Engineering', 'Git', 'Python', 'Linux', 'C#'],
               image: 'game2',
               primaryAction: {
                 type: 'youtube',
@@ -457,10 +457,10 @@ const content = {
             },
             {
               title: 'Witch on the Holy Night',
-              description: 'A localization project focused on player experience, clarity, and narrative context.',
+              description: 'A pioneering project combining AI automation and high-standard literary revision to preserve a refined narrative style.',
               longDescription:
-                'Witch on the Holy Night is a localization project centered on reading experience, textual clarity, and careful narrative adaptation. The work involves style choices, terminology management, and workflow automation to maintain consistency throughout the project.',
-              tech: ['PT-BR Localization', 'Review', 'Terminology'],
+                'A localization project combining AI automation and literary revision, focused on preserving the original work\'s refined, poetic, and narrative style.\n\nKey skills:\n• Prompt engineering for high contextual accuracy.\n• Grammar refinement in formal standard language and elevated vocabulary.\n• Style analysis to avoid mechanical translations and preserve reading rhythm.',
+              tech: ['Prompt Engineering', 'AI Automation', 'Formal Language', 'Textual Analysis'],
               image: 'game3',
               primaryAction: {
                 type: 'youtube',
@@ -479,9 +479,9 @@ const content = {
           title: 'Content Creation',
           projects: [
             {
-              title: 'Content Video 01',
-              description: 'Video content project focused on presentation, pacing, and clear information structure.',
-              tech: ['Script', 'Editing', 'YouTube'],
+              title: 'Event Coverage',
+              description: 'Documentary about the Anime Friends 2024 event journey, focused on community connection and channel behind-the-scenes.',
+              tech: ['Scriptwriting', 'Editing', 'Storytelling', 'Teamwork'],
               thumbnail: 'y-DoblS-J6A',
               primaryAction: {
                 type: 'youtube',
@@ -490,9 +490,9 @@ const content = {
               },
             },
             {
-              title: 'Content Video 02',
-              description: 'Long-form video production with attention to structure, communication, and audience retention.',
-              tech: ['Presentation', 'Editing', 'Storytelling'],
+              title: 'Live Championship',
+              description: 'Organization, commentary, and live broadcast of a competitive Melty Blood: Type Lumina tournament, focused on community growth.',
+              tech: ['Event Management', 'Streaming (OBS)', 'Communication'],
               thumbnail: 'VdlFNCfNmL0',
               primaryAction: {
                 type: 'youtube',
@@ -501,8 +501,8 @@ const content = {
               },
             },
             {
-              title: 'Content Video 03',
-              description: 'Audiovisual project built to deliver content with clarity, pacing, and visual support.',
+              title: 'Audiovisual Essay',
+              description: 'Video essay focused on historical research, scriptwriting, and editing to explain the origin and viral spread of a classic fighting game mascot in internet culture.',
               tech: ['Content', 'Editing', 'Publishing'],
               thumbnail: 'ohtHvN2MKU8',
               primaryAction: {
@@ -518,36 +518,36 @@ const content = {
     about: {
       title: 'About',
       eyebrow: 'Professional Profile',
-      bio: 'IT professional and Information Systems undergraduate with hands-on experience in technical support, incident management, and enterprise environment stability. Strong background in N1/N2 support, hardware/software troubleshooting, user provisioning, and clear communication focused on SLAs and user experience.',
+      bio: 'Hello, my name is Thiago Krauzer. I am an IT professional and Information Systems graduate with experience in technical support, incident management, and corporate environment stability. I have hands-on experience with N1/N2 support, hardware and software troubleshooting, user provisioning, and clear communication focused on SLAs and user experience.',
       scrollHintLabel: 'Scroll to resume section',
       resumeTitle: 'Experience and Skills',
-      resumeSubtitle: 'Public resume overview focused on technical operations and consistent delivery in critical environments.',
+      resumeSubtitle: 'Resume summary focused on technical operations, execution, and result delivery in critical environments.',
       resumeSections: [
         {
           title: 'Professional Summary',
           items: [
-            'Experience with technical support, end-user service, and incident handling through ITSM workflows.',
-            'Hands-on support across Windows, MacOS, Microsoft Office, Google Workspace, Active Directory, and MDM.',
-            'Organized and user-focused profile with strong communication and operational discipline.',
+            'Experience in technical support, user service, and incident resolution through ITSM workflows.',
+            'Hands-on experience with Windows, macOS, Microsoft Office, Google Workspace, Active Directory, and MDM.',
+            'Organized, communicative profile focused on continuous improvement and operational stability.',
           ],
         },
         {
           title: 'Education',
-          items: ['Bachelor in Information Systems - UNINASSAU (graduated in 2025).'],
+          items: ['Bachelor in Information Systems - UNINASSAU 2021/2024.'],
         },
         {
           title: 'Professional Experience',
           items: [
-            'IT Technician | UNINASSAU (Feb/2025 - Present): incident/request handling, on-site and remote support, provisioning, and technical documentation.',
-            'Freelance IT Technician (PJ) | CERB Consulting (May/2025 - Mar/2026): on-demand support projects, asset inventory, and medium/high complexity incidents.',
-            'IT Support Intern | Court of Justice of Rondonia (May/2022 - May/2024): N1/N2 support, infrastructure maintenance, and critical system continuity.',
+            'IT Technician | UNINASSAU (Feb/2025 - Present): incidents and service requests, remote/on-site support, provisioning, and technical documentation.',
+            'Freelance IT Technician (PJ) | CERB Consulting (May/2025 - Mar/2026): on-demand support, asset inventory, and medium/high complexity incident resolution.',
+            'IT Support Intern | Court of Justice of Rondônia (May/2022 - May/2024): N1/N2 support, infrastructure maintenance, and participation in critical systems.',
           ],
         },
         {
           title: 'Technical Skills',
           items: [
-            'Incident/request management (Jira, Lecom), remote support, and troubleshooting.',
-            'Windows Desktop/Server, MacOS, Microsoft Office, Google Workspace, and Active Directory.',
+            'Incident and request management (Jira, Lecom), remote support, and troubleshooting.',
+            'Windows Desktop/Server, macOS, Microsoft Office, Google Workspace, and Active Directory.',
             'Hardware maintenance, infrastructure support, asset inventory, and mobile device management (MDM).',
           ],
         },
@@ -555,8 +555,8 @@ const content = {
           title: 'Languages and Strengths',
           items: [
             'Native Portuguese and fluent English (C1 - CEFR).',
-            'Empathetic communication, prioritization, and pressure-ready problem solving.',
-            'Collaboration in hybrid/remote teams and fast adoption of new tools.',
+            'Empathetic communication, organization of multiple demands, and decision-making under pressure.',
+            'Collaboration in hybrid/remote teams and fast learning of new tools.',
           ],
         },
       ],
