@@ -323,7 +323,6 @@ const content = {
     },
     skills: {
       title: 'Skills',
-      subtitle: 'My skills are organized into four main areas.',
       categories: [
         {
           title: 'Front-end Development',
@@ -365,7 +364,6 @@ const content = {
     },
     projects: {
       title: 'Projects',
-      subtitle: 'A curated selection of projects in development, translation, and content creation.',
       sections: [
         {
           title: 'Development',
